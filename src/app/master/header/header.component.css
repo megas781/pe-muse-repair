@@ -1,0 +1,71 @@
+.header {
+  padding: 16px;
+  background: #00423a;
+  color: white;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header-left-side {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  padding: 8px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-item {
+  position: relative;
+}
+.nav-item:hover > .nav-sublist {
+  display: block;
+}
+.nav-link {
+  padding: 8px 16px;
+  transition: 0.2s background-color, 0.2s color;
+  color: #e7e7e7;
+  text-decoration: underline;
+}
+.nav-link:hover {
+  color: #00423a;
+  background-color: #eee7e7;
+}
+.nav-sublist {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  background: #8f978b;
+  list-style: none;
+  display: none;
+  padding: 8px 22px 8px 16px;
+}
+.nav-subitem {
+  padding: 4px 8px;
+}
+.nav-sublink {
+  color: #f6f5f5;
+}
+.nav-sublink:hover {
+  color: #e2e2e2;
+}
+
+.right-wrapper {
+  display: flex;
+  align-items: center;
+}
+.phone-number {
+  color: white;
+  padding: 8px;
+  font-size: 18px;
+  margin-right: 16px;
+}
+.order-repair {
+
+}

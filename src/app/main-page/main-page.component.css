@@ -1,0 +1,121 @@
+/* intro */
+
+.intro {
+  background-image: url("https://avatars.mds.yandex.net/get-altay/1594075/2a0000016e41590627655103e74f3336fa11/XXL");
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 16px;
+  height: 64vh;
+  text-align: center;
+  justify-content: center;
+}
+
+.intro-title {
+  font-size: 40px;
+}
+
+
+.our-masters {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 16px;
+}
+
+.our-masters .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.our-masters .left-side {
+  padding: 16px;
+}
+
+.our-masters-title {
+
+}
+
+.our-masters-subtitle {
+
+}
+
+.our-masters-list {
+
+}
+
+.our-masters-list-item {
+
+}
+
+.our-masters .swiper-wrapper {
+  width: 320px !important;
+  height: 240px !important;
+}
+
+.our-masters .order-repair {
+  align-self: center;
+}
+
+.service {
+  text-align: center;
+  background: #03443C;
+  padding: 60px 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 400px));
+  justify-content: center;
+  grid-gap: 32px;
+}
+
+.service-item {
+  position: relative;
+  min-height: 200px;
+  max-height: 240px;
+}
+
+.service-item__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+  mix-blend-mode: luminosity;
+}
+
+.service-item__text {
+  z-index: 2;
+  position: relative;
+  background: rgba(255, 255, 255, 0.79);
+  padding: 8px;
+  display: block;
+  color: black;
+}
+
+.service .order-repair {
+  align-self: center;
+  margin-top: 16px;
+}
+
+.questions {
+  padding: 70px 0 100px;
+}
+.questions .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+

@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.img-back {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.56);
+  background-blend-mode: darken;
+  color: white;
+}
+.img-slide {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.target-button {
+  background-color: #05cd05;
+  color: white;
+  border-radius: 16px;
+  padding: 8px 12px;
+  transition-duration: 0.2s;
+}
+.target-button:hover {
+  cursor: pointer;
+  color: #efeded;
+}
