@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {ServiceDetailService} from '../service-detail.service';
 
 @Component({
   selector: 'app-service-detail-page',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServiceDetailPageComponent implements OnInit {
 
-  constructor() { }
+  category = "";
+
+  service = {};
+
+  constructor(private serviceDetailService: ServiceDetailService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.serviceDetailService
+    let self = this;
+    this.route.params.subscribe(function(params) {
+      self.service = self.serviceDetailService.contents[params["category"]];
+    });
   }
 
 }
