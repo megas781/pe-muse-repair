@@ -1,4 +1,7 @@
 # MuseRepair
+Репозиторий сайта мастерской MuseRepair по ремонту музыкальных инструментов. Проект создал Глеб Калачев, группа 181-321 специально для дисциплины "Программная Инженерия"
+
+*Сгенерировано Angular CLI*
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
 
