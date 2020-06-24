@@ -1,0 +1,42 @@
+<div class="container">
+  <app-edit-modal [order]="editableOrder" *ngIf="editableOrder != null" (closeEmitter)="handleCloseEditWithSave($event)"></app-edit-modal>
+  <h1 style="text-align: center">Где мой заказ?</h1>
+  <form [formGroup]="theFormGroup" style="display: flex; flex-direction: column; align-items: center">
+    <p>Введите свой номер телефона</p>
+    <div style="margin-bottom: 8px"><input type="tel" formControlName="phone" required name="phone"></div>
+    <div><input type="submit" value="Показать список заказов" (click)="fetchOrdersForNumber()"></div>
+  </form>
+  <div class="order-list">
+    <div *ngFor="let order of this.orderArray" class="order-cell">
+      <h3>Заказ #{{order.id.substr(0, 8).toUpperCase()}}</h3>
+      <div style="display: flex; ">
+        <table style="border-collapse: collapse; width: 100%;">
+          <tr>
+            <td class="left-col">ФИО</td>
+            <td class="right-col">{{order.fio}}</td>
+          </tr>
+          <tr>
+            <td class="left-col">Номер телефона</td>
+            <td class="right-col">{{order.phone}}</td>
+          </tr>
+          <tr>
+            <td class="left-col">Адрес</td>
+            <td class="right-col">{{order.address}}</td>
+          </tr>
+          <tr>
+            <td class="left-col">Желаемое время приезда</td>
+            <td claoss="right-col">{{order.time}}</td>
+          </tr>
+          <tr>
+            <td class="left-col">Описание требуемой услуги</td>
+            <td class="right-col">{{order.comment}}</td>
+          </tr>
+        </table>
+        <div>
+          <div class="edit-button" (click)="showEditModal(order.id)">Изменить заявку</div>
+          <div class="delete-button" (click)="deleteOrder(order.id)">Отменить заявку</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

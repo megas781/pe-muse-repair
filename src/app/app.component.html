@@ -1,3 +1,6 @@
-<app-header></app-header>
+<app-header (orderRepairEmitter)="showOrderModal()"></app-header>
+
+<app-modal-order-repair *ngIf="shouldShowModal" (closeEmitter)="hideOrderModal()"></app-modal-order-repair>
+
 <router-outlet></router-outlet>
 <app-footer></app-footer>

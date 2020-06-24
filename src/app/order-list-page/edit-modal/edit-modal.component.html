@@ -1,0 +1,25 @@
+<form class="modal-order" [formGroup]="this.theFormGroup">
+  <div class="dim" (click)="hideModal()"></div>
+  <div class="input-container">
+    <h3 style="position: relative; z-index: 3">Заказать ремонт</h3>
+    <div class="label">Ваш номер телефона*</div>
+    <input name="phone" formControlName="phone" type="tel" class="text-input" required>
+    <div class="label">Ваше ФИО*</div>
+    <input name="fio" formControlName="fio" type="text" class="text-input" required>
+    <div class="label">Адрес выезда*</div>
+    <input name="address" formControlName="address" type="text" class="text-input" required>
+    <div class="label">Время выезда</div>
+    <select name="time" formControlName="time" id="time">
+      <option value="morning">10:00-13:00</option>
+      <option value="afternoon">13:00-16:00</option>
+      <option value="late">16:00-19:00</option>
+    </select>
+    <div class="label">Коментарий к проблеме</div>
+    <textarea name="comment" formControlName="comment" id="" cols="30" rows="10" class="text-input" ></textarea>
+    <div class="label">Фотография (опционально)</div>
+    <input name="photoFile" formControlName="photoFile" type="file" style="margin-bottom: 8px">
+
+    <input class="submit" type="submit" (click)="saveOrder()" value="Сохранить">
+    <button class="cancel" (click)="hideModal()">Отмена</button>
+  </div>
+</form>

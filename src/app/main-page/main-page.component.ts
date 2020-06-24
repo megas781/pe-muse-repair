@@ -18,6 +18,9 @@ export class MainPageComponent implements OnInit {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      autoplay: {
+        delay: 2000
+      }
     });
   }
 

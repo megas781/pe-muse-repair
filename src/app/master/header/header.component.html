@@ -29,8 +29,11 @@
     </div>
 
     <div class="right-wrapper">
+
+      <a routerLink="order-list" style="color: gray">Где мой заказ?</a>
+
       <a href="tel:8-977-256-56-80" class="phone-number">8-977-256-56-80</a>
-      <div class="target-button order-repair">Заказать ремонт</div>
+      <div class="target-button order-repair" (click)="orderRepairEmitter.emit()">Заказать ремонт</div>
     </div>
   </div>
 </div>
